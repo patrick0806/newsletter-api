@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { NyTimesConnector } from 'src/shared/connectors';
-import { CategoryEnum } from 'src/shared/enums/article';
+import { NyTimesConnector } from '@shared/connectors';
+import { CategoryEnum } from '@shared/enums/article';
 
 @Injectable()
 export class GetArticleByCategoryService {
