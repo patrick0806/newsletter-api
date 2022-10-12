@@ -1,5 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
+
 import { CategoryEnum } from '@shared/enums/article';
+
 import { GetArticleByCategoryService } from './getArticlesByCategory.service';
 
 @Controller('/articles')

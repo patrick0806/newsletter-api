@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
+
 import { CategoryEnum } from '../enums/article';
 
 @Injectable()

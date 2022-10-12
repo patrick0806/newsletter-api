@@ -77,7 +77,7 @@ I still don't know how long this project will take to finish but I want to add s
 
 - Documentation
 - TDD
-- Tests (unitary/integration)
+- Tests (unitary)
 - CI/CD
 - Logs and monitorin
 

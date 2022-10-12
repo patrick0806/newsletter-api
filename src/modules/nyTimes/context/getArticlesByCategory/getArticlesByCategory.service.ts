@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+
 import { NyTimesConnector } from '@shared/connectors';
 import { CategoryEnum } from '@shared/enums/article';
 
