@@ -1,6 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 
+import { GetArticleByCategoryResponseDTO } from '@shared/dtos/nyTimes/getArticlesByCategory/response';
+import { parseToCamelCase } from '@shared/utilss';
+
 import { CategoryEnum } from '../enums/article';
 
 @Injectable()
@@ -12,11 +15,13 @@ export class NyTimesConnector {
     });
   }
 
-  async getArticlesByCategory(category: CategoryEnum) {
+  async getArticlesByCategory(
+    category: CategoryEnum,
+  ): Promise<GetArticleByCategoryResponseDTO> {
     const { data } = await this.nyTimesApi.get(
       `/svc/topstories/v2/${category}.json?api-key=${process.env.NY_TIMES_API_KEY}`,
     );
     console.log(data);
-    return data;
+    return parseToCamelCase(data);
   }
 }

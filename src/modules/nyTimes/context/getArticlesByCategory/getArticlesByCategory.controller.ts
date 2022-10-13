@@ -1,5 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 
+import { GetArticleByCategoryResponseDTO } from '@shared/dtos/nyTimes';
 import { CategoryEnum } from '@shared/enums/article';
 
 import { GetArticleByCategoryService } from './getArticlesByCategory.service';
@@ -10,7 +11,9 @@ export class GetArticleByCategoryController {
     private getArticlesByCategoryService: GetArticleByCategoryService,
   ) {}
   @Get(':category')
-  async GetArticleByCategory(@Param('category') category: CategoryEnum) {
+  async GetArticleByCategory(
+    @Param('category') category: CategoryEnum,
+  ): Promise<GetArticleByCategoryResponseDTO> {
     return this.getArticlesByCategoryService.execute(category);
   }
 }
