@@ -21,7 +21,6 @@ export class NyTimesConnector {
     const { data } = await this.nyTimesApi.get(
       `/svc/topstories/v2/${category}.json?api-key=${process.env.NY_TIMES_API_KEY}`,
     );
-    console.log(data);
     return parseToCamelCase(data);
   }
 }
