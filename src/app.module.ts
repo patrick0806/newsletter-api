@@ -1,7 +1,7 @@
-/* import { GoogleModule } from '@modules/google/google.module';
- */ import { Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
+import { AuthModule } from '@modules/auth/context/auth.module';
 import { HealthCheckModule } from '@modules/healthCheck/healthCheck.module';
 
 import { NyTimesModule } from './modules/nyTimes/nyTiimes.module';
@@ -9,7 +9,7 @@ import { NyTimesModule } from './modules/nyTimes/nyTiimes.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    /* GoogleModule, */
+    AuthModule,
     HealthCheckModule,
     NyTimesModule,
   ],

@@ -82,3 +82,12 @@ I still don't know how long this project will take to finish but I want to add s
 - Logs and monitorin
 
 ## Swagger route is http://localhost:3005/api-docs
+
+## TODO
+
+- add tratative for connectors
+- add global handler error
+- add logs
+- add tests
+- add type on connectors
+- add documentation
